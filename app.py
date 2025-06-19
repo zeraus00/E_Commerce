@@ -3,10 +3,5 @@ import uvicorn
 
 app = FastAPI()
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> d2fa6db (initialized backend)
 if __name__ == '__main__':
     uvicorn.run('app:app', reload=True)
