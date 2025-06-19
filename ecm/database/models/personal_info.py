@@ -1,16 +1,12 @@
 from sqlalchemy import Column, String, Integer, ForeignKey
 
 from ecm.database.models import Base
-
-
 class PersonalInformation(Base):
     __tablename__ = 'personal_info'
 
     id: int = Column('id', Integer, primary_key=True, autoincrement=True)
-    user_id: int = Column('user_id', Integer,
-                          ForeignKey('users.id',
-                                     ondelete='cascade'),
-                          nullable=False)
+    user_id : int = Column('user_id', Integer,
+                           ForeignKey('users.id', ondelete='cascade'), nullable=False)
     firstname: str = Column('firstname', String, nullable=False)
     middlename: str = Column('middlename', String, nullable=True)
     lastname: str = Column('lastname', String, nullable=False)
@@ -18,8 +14,8 @@ class PersonalInformation(Base):
     age: int = Column('age', Integer, nullable=False)
     sex: str = Column('sex', String, nullable=False)
     contact_no : str = Column('contact_no', String, nullable=False)
-
-    def __init__(self, user_id,
+    def __init__(self,
+                 user_id,
                  firstname,
                  middlename,
                  lastname,

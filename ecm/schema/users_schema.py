@@ -5,15 +5,13 @@ class UsersInput(BaseModel):
     email: EmailStr
     password: str
 
-
-class UsersOut(BaseModel):
-    id : int
-    email: EmailStr
-    password: str
+class UsersOutput(BaseModel):
+    id: int
+    email : str
+    password : str
 
     class Config:
         from_attributes = True
-
 
 class UsersInputPersonalInformation(BaseModel):
     user_id: int
@@ -26,7 +24,7 @@ class UsersInputPersonalInformation(BaseModel):
     contact_no : str
 
 
-class UsersInputAddress(BaseModel):
+class UserInputAddress(BaseModel):
     user_id: int
     region: str
     province: str
