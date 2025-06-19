@@ -5,3 +5,5 @@ python-dotenv
 alembic
 passlib[argon2]
 python-jose[cryptography]
+aiosqlite
+asyncpg
