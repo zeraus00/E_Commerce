@@ -1,7 +1,14 @@
 fastapi[standard]
+<<<<<<< HEAD
 SQLAlchemy
 pydantic-settings
 python-dotenv
 alembic
 passlib[argon2]
 python-jose[cryptography]
+=======
+sqlalchemy
+pydantic-settings
+python-dotenv
+alembic
+>>>>>>> d2fa6db (initialized backend)
